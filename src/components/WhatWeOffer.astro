@@ -1,0 +1,115 @@
+<section class="what-we-offer container">
+	<article class="heading-card">
+		<h3 class="heading-card__title">¿Que ofrecemos?</h3>
+		<p class="heading-card__information">
+			En ASFIT, personalizamos nuestras soluciones financieras y tecnológicas
+			para adaptarnos a las necesidades específicas de tu empresa, maximizando
+			la eficiencia y el crecimiento.
+		</p>
+	</article>
+	<article class="offer-card">
+		<div class="offer-card__image">
+			<img src="analysis.png" alt="Analisis de metricas" />
+		</div>
+		<h4 class="offer-card__title">Análisis y Generación de Métricas</h4>
+		<p class="offer-card__information">
+			Dashboard Personalizados, KPI’s Financieros, Análisis Predictivo,
+			Segmentación de Clientes, Evaluación de Desempeño, Reporte Automatizado de
+			KPI’s, Benchmarking, y más.
+		</p>
+	</article>
+	<article class="offer-card">
+		<div class="offer-card__image">
+			<img src="automation.png" alt="Optimizacion de procesos" />
+		</div>
+		<h4 class="offer-card__title">Optimización de Procesos</h4>
+		<p class="offer-card__information">
+			Automatización de Tareas , Reingeniería de Procesos, Integración de
+			Sistemas, Gestión del Cambio, Optimización del Ciclo de Producción, entre
+			otros.
+		</p>
+	</article>
+	<article class="offer-card">
+		<div class="offer-card__image">
+			<img src="opportunities.png" alt="Oportunidades tecnologicas" />
+		</div>
+		<h4 class="offer-card__title">Oportunidades Tecnológicas</h4>
+		<p class="offer-card__information">
+			Identificación de Nuevas Tecnologías, Soluciones de Big Data, Inteligencia
+			Artificial, Optimización de Infraestructura IT, Automatización de
+			Procesos, entre otros.
+		</p>
+	</article>
+	<article class="offer-card">
+		<div class="offer-card__image">
+			<img src="upgrades.png" alt="Mejora continua de operaciones" />
+		</div>
+		<h4 class="offer-card__title">Mejora Continua de Operaciones</h4>
+		<p class="offer-card__information">
+			Revisión y Optimización de Procesos y Presupuestos, Auditorías de
+			Finanzas/Tecnología, Programas de Capacitación Continua, Optimización de
+			Flujos de Trabajo, Análisis de Costos y Rentabilidad, entre otros.
+		</p>
+	</article>
+</section>
+
+<style lang="scss">
+	.what-we-offer {
+		margin-top: 80px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 18px;
+
+		.heading-card {
+			grid-column-start: 1;
+			grid-column-end: 3;
+			padding: 50px;
+			background-color: rgba($color: #a4a4a4, $alpha: 0.1);
+			border-radius: 20px;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			gap: 30px;
+
+			&__title {
+				font-size: 48px;
+				text-align: left;
+				background: linear-gradient(to right, #2b92d5, #3fd9d7);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+
+			&__information {
+				font-size: 18px;
+				line-height: 28px;
+			}
+		}
+
+		.offer-card {
+			background-color: rgba($color: #a4a4a4, $alpha: 0.1);
+			border-radius: 20px;
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+
+			&__image {
+				img {
+					max-width: 100%;
+					object-fit: cover;
+				}
+			}
+
+			&__title {
+				padding: 0 15px;
+				font-size: 18px;
+				font-weight: bold;
+			}
+
+			&__information {
+				font-size: 14px;
+				line-height: 20px;
+				padding: 0 15px 15px 15px;
+			}
+		}
+	}
+</style>
