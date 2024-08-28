@@ -1,0 +1,44 @@
+<section
+	class="areas container"
+	aria-label="Areas criticas de mejora empresarial"
+>
+	<h2 class="areas__title">Áreas Criticas de Mejora Empresarial</h2>
+	<p class="areas__information">
+		Identificar estas áreas críticas es esencial para eliminar obstáculos,
+		optimizar recursos y asegurar un crecimiento sostenido, permitiendo a la
+		empresa alcanzar su máximo potencial.
+	</p>
+	<div class="areas__image">
+		<img src="areas.png" alt="Areas criticas de mejora empresarial" />
+	</div>
+</section>
+
+<style lang="scss">
+	.areas {
+		margin-top: 100px;
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+
+		&__title {
+			text-align: center;
+			font-size: 48px;
+			font-weight: bold;
+			background: linear-gradient(to right, #2b92d5, #3fd9d7);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+
+		&__information {
+			text-align: center;
+			font-size: 18px;
+			line-height: 28px;
+		}
+
+		&__image {
+			img {
+				max-width: 100%;
+			}
+		}
+	}
+</style>
