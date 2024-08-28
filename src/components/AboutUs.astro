@@ -1,0 +1,66 @@
+<section class="about container" aria-label="Acerca de nosotros">
+	<div class="about__image">
+		<img src="about-us.png" alt="Acerca de nosotros" />
+	</div>
+
+	<div class="about__content">
+		<h2 class="about__title">Acerca de nosotros</h2>
+
+		<h3 class="about__subtitle">Nuestra trayectoria y experiencia</h3>
+
+		<p class="about__information">
+			En ASFIT, somos un equipo de 4 integrantes que, en conjunto, contamos con
+			más de 20 años de experiencia en análisis financiero, analítica de datos y
+			tecnología avanzada. Nos dedicamos a ofrecer soluciones personalizadas que
+			optimizan procesos, reducen costos e impulsan la innovación. Nuestra
+			experiencia con empresas multinacionales nos permite convertir la
+			tecnología en estrategias efectivas, cuidadosamente adaptadas a las
+			necesidades específicas de cada cliente, acompañándolos con compromiso
+			hacia el éxito en un entorno altamente competitivo.
+		</p>
+	</div>
+</section>
+
+<style lang="scss">
+	.about {
+		margin: 120px auto;
+		display: flex;
+		gap: 60px;
+		align-items: center;
+
+		&__image {
+			flex: 1;
+
+			img {
+				max-width: 100%;
+			}
+		}
+
+		&__content {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+		}
+
+		&__title {
+			font-size: 48px;
+			font-weight: bold;
+			text-align: center;
+			background: linear-gradient(to right, #2b92d5, #3fd9d7);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+
+		&__subtitle {
+			font-size: 18px;
+			font-weight: bold;
+			text-align: center;
+		}
+
+		&__information {
+			font-size: 18px;
+			line-height: 28px;
+		}
+	}
+</style>
