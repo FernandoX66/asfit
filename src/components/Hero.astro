@@ -8,83 +8,85 @@
 		</p>
 
 		<div class="hero__statistics">
-			<div class="hero-statistic">
+			<article class="hero-statistic" aria-labelledby="processes">
 				<p class="hero-statistic__percentage">30%</p>
 				<p class="hero-statistic__label">Reduccion de <br />costos</p>
-			</div>
-			<div class="hero-statistic">
+			</article>
+			<article class="hero-statistic" aria-labelledby="processes">
 				<p class="hero-statistic__percentage">100+</p>
 				<p class="hero-statistic__label">Clientes <br />satisfechos</p>
-			</div>
-			<div class="hero-statistic">
+			</article>
+			<article class="hero-statistic" aria-labelledby="processes">
 				<p class="hero-statistic__percentage">20%</p>
-				<p class="hero-statistic__label">Optimizacion de <br /> procesos</p>
-			</div>
+				<p id="processes" class="hero-statistic__label">
+					Optimizacion de <br /> procesos
+				</p>
+			</article>
 		</div>
 	</div>
 
 	<div class="hero__image">
 		<img src="dashboard.svg" alt="Graficos estadisticos" />
 	</div>
-</section>
 
-<style lang="scss">
-	.hero {
-		display: flex;
-		gap: 20px;
-		align-items: center;
-		min-height: calc(100svh - 80px);
-
-		&__content {
-			flex: 1;
+	<style lang="scss">
+		.hero {
 			display: flex;
-			flex-direction: column;
-			gap: 30px;
-		}
+			gap: 20px;
+			align-items: center;
+			min-height: calc(100svh - 80px);
 
-		&__title {
-			font-size: 72px;
-			background: linear-gradient(to right, #2b92d5, #3fd9d7);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-		}
-
-		&__information {
-			font-size: 18px;
-			line-height: 28px;
-		}
-
-		&__statistics {
-			display: flex;
-			gap: 10px;
-
-			.hero-statistic {
-				background-color: rgba($color: #a4a4a4, $alpha: 0.1);
-				border-radius: 15px;
-				padding: 10px;
+			&__content {
+				flex: 1;
 				display: flex;
-				align-items: center;
-				justify-content: center;
 				flex-direction: column;
-				gap: 5px;
+				gap: 30px;
+			}
 
-				&__percentage {
-					font-size: 22px;
+			&__title {
+				font-size: 72px;
+				background: linear-gradient(to right, #2b92d5, #3fd9d7);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+
+			&__information {
+				font-size: 18px;
+				line-height: 28px;
+			}
+
+			&__statistics {
+				display: flex;
+				gap: 10px;
+
+				.hero-statistic {
+					background-color: rgba($color: #a4a4a4, $alpha: 0.1);
+					border-radius: 15px;
+					padding: 10px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-direction: column;
+					gap: 5px;
+
+					&__percentage {
+						font-size: 22px;
+					}
+
+					&__label {
+						font-size: 12px;
+						text-align: center;
+					}
 				}
+			}
 
-				&__label {
-					font-size: 12px;
-					text-align: center;
+			&__image {
+				flex: 1;
+
+				img {
+					max-width: 100%;
 				}
 			}
 		}
-
-		&__image {
-			flex: 1;
-
-			img {
-				max-width: 100%;
-			}
-		}
-	}
-</style>
+	</style>
+</section>
