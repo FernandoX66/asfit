@@ -34,7 +34,16 @@
 			display: flex;
 			gap: 20px;
 			align-items: center;
-			min-height: calc(100svh - 162px);
+			min-height: calc(100svh - 262px);
+			margin-top: 50px;
+
+			@media (min-width: 480px) {
+				flex-direction: column-reverse;
+			}
+
+			@media (min-width: 768px) {
+				flex-direction: row;
+			}
 
 			&__content {
 				flex: 1;
@@ -44,20 +53,39 @@
 			}
 
 			&__title {
-				font-size: 72px;
+				font-size: 48px;
+				line-height: 1;
+				text-align: center;
 				background: linear-gradient(to right, #2b92d5, #3fd9d7);
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
+
+				@media (min-width: 480px) {
+					font-size: 60px;
+				}
+
+				@media (min-width: 768px) {
+					font-size: 72px;
+					text-align: left;
+				}
 			}
 
 			&__information {
 				font-size: 18px;
 				line-height: 28px;
+
+				@media (max-width: 768px) {
+					text-align: center;
+				}
 			}
 
 			&__statistics {
 				display: flex;
 				gap: 10px;
+
+				@media (max-width: 768px) {
+					justify-content: center;
+				}
 
 				.hero-statistic {
 					background-color: rgba($color: #a4a4a4, $alpha: 0.1);
@@ -70,11 +98,13 @@
 					gap: 5px;
 
 					&__percentage {
-						font-size: 22px;
+						font-size: 24px;
+						line-height: 32px;
 					}
 
 					&__label {
 						font-size: 12px;
+						line-height: 16px;
 						text-align: center;
 					}
 				}
@@ -82,9 +112,15 @@
 
 			&__image {
 				flex: 1;
+				display: none;
+
+				@media (min-width: 480px) {
+					display: block;
+					width: 60%;
+				}
 
 				img {
-					max-width: 100%;
+					width: 100%;
 				}
 			}
 		}

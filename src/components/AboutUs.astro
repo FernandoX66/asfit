@@ -1,4 +1,4 @@
-<section class="about container" aria-label="Acerca de nosotros">
+<section id="about" class="about container" aria-label="Acerca de nosotros">
 	<div class="about__image">
 		<img src="about-us.png" alt="Acerca de nosotros" />
 	</div>
@@ -25,14 +25,28 @@
 	.about {
 		margin-top: 120px;
 		display: flex;
-		gap: 60px;
+		gap: 20px;
 		align-items: center;
+		flex-direction: column;
+
+		@media (min-width: 480px) {
+			gap: 60px;
+		}
+
+		@media (min-width: 768px) {
+			flex-direction: row;
+		}
 
 		&__image {
 			flex: 1;
+			width: 70%;
+
+			@media (min-width: 768px) {
+				width: 100%;
+			}
 
 			img {
-				max-width: 100%;
+				width: 100%;
 			}
 		}
 
@@ -44,12 +58,23 @@
 		}
 
 		&__title {
-			font-size: 48px;
+			font-size: 30px;
+			line-height: 36px;
 			font-weight: bold;
 			text-align: center;
 			background: linear-gradient(to right, #2b92d5, #3fd9d7);
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
+
+			@media (min-width: 480px) {
+				font-size: 36px;
+				line-height: 40px;
+			}
+
+			@media (min-width: 768px) {
+				font-size: 48px;
+				line-height: 1;
+			}
 		}
 
 		&__subtitle {
@@ -59,8 +84,13 @@
 		}
 
 		&__information {
-			font-size: 18px;
-			line-height: 28px;
+			font-size: 16px;
+			line-height: 24px;
+
+			@media (min-width: 480px) {
+				font-size: 18px;
+				line-height: 28px;
+			}
 		}
 	}
 </style>

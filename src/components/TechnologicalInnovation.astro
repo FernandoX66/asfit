@@ -15,20 +15,44 @@
 	.tech-innovation {
 		margin-top: 100px;
 		display: flex;
-		gap: 90px;
+		flex-direction: column-reverse;
+		gap: 30px;
+
+		@media (min-width: 768px) {
+			gap: 90px;
+			flex-direction: row;
+		}
 
 		&__information {
-			font-size: 18px;
-			line-height: 28px;
+			font-size: 16px;
+			line-height: 24px;
 			flex: 1;
+
+			@media (min-width: 480px) {
+				font-size: 18px;
+				line-height: 28px;
+			}
 		}
 
 		&__title {
 			flex: 1;
-			font-size: 48px;
+			font-size: 30px;
+			line-height: 36px;
 			background: linear-gradient(to right, #2b92d5, #3fd9d7);
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
+			text-align: center;
+
+			@media (min-width: 480px) {
+				text-align: left;
+				font-size: 36px;
+				line-height: 40px;
+			}
+
+			@media (min-width: 768px) {
+				font-size: 48px;
+				line-height: 1;
+			}
 		}
 	}
 </style>

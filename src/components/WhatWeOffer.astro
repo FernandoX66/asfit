@@ -1,4 +1,4 @@
-<section class="what-we-offer container">
+<section id="services" class="what-we-offer container">
 	<article class="heading-card">
 		<h3 class="heading-card__title">¿Que ofrecemos?</h3>
 		<p class="heading-card__information">
@@ -57,31 +57,58 @@
 	.what-we-offer {
 		margin-top: 80px;
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
 		gap: 18px;
 
+		@media (min-width: 480px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media (min-width: 768px) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
 		.heading-card {
-			grid-column-start: 1;
-			grid-column-end: 3;
-			padding: 50px;
 			background-color: rgba($color: #a4a4a4, $alpha: 0.1);
 			border-radius: 20px;
 			display: flex;
-			justify-content: center;
 			flex-direction: column;
 			gap: 30px;
+			justify-content: center;
+			padding: 20px;
+
+			@media (min-width: 480px) {
+				padding: 50px;
+				grid-column-start: 1;
+				grid-column-end: 3;
+			}
 
 			&__title {
-				font-size: 48px;
+				font-size: 30px;
+				line-height: 36px;
 				text-align: left;
 				background: linear-gradient(to right, #2b92d5, #3fd9d7);
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
+
+				@media (min-width: 480px) {
+					font-size: 36px;
+					line-height: 40px;
+				}
+
+				@media (min-width: 768px) {
+					font-size: 48px;
+					line-height: 1;
+				}
 			}
 
 			&__information {
-				font-size: 18px;
-				line-height: 28px;
+				font-size: 16px;
+				line-height: 24px;
+
+				@media (min-width: 480px) {
+					font-size: 18px;
+					line-height: 28px;
+				}
 			}
 		}
 
@@ -94,15 +121,16 @@
 
 			&__image {
 				img {
-					max-width: 100%;
+					width: 100%;
 					object-fit: cover;
 				}
 			}
 
 			&__title {
-				padding: 0 15px;
 				font-size: 18px;
 				font-weight: bold;
+				line-height: 28px;
+				padding: 0 15px;
 			}
 
 			&__information {
