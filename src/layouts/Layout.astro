@@ -34,6 +34,10 @@ const { title } = Astro.props;
 		font-family: "Montserrat", sans-serif;
 	}
 
+	html {
+		scroll-behavior: smooth;
+	}
+
 	body {
 		background-color: #000;
 		color: rgba(255, 255, 255, 0.8);
@@ -43,5 +47,82 @@ const { title } = Astro.props;
 		width: 90%;
 		max-width: 1200px;
 		margin: 0 auto;
+	}
+
+	.enter-right {
+		animation: enterRight 1s ease-out forwards;
+	}
+
+	.enter-bottom {
+		animation: enterBottom 1s ease-out forwards;
+	}
+
+	.enter-left {
+		animation: enterLeft 1s ease-out forwards;
+	}
+
+	/* animations */
+
+	@keyframes enterRight {
+		0% {
+			opacity: 0;
+			transform: translateX(20px);
+		}
+
+		80% {
+			transform: translateX(-5px);
+		}
+
+		100% {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+
+	@keyframes enterBottom {
+		0% {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+
+		80% {
+			transform: translateY(-5px);
+		}
+
+		100% {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes enterBottom {
+		0% {
+			opacity: 0;
+			transform: translateX(-20px);
+		}
+
+		80% {
+			transform: translateX(5px);
+		}
+
+		100% {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+	@keyframes enterBottom {
+		0% {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+
+		80% {
+			transform: translateY(-5px);
+		}
+
+		100% {
+			opacity: 1;
+			transform: translateX(0);
+		}
 	}
 </style>

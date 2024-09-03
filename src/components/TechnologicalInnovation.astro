@@ -1,3 +1,10 @@
+<script>
+	import { addViewportAnimation } from "../utils/add-viewport-animation";
+
+	const title = document.querySelector(".tech-innovation__title");
+	addViewportAnimation(title!, "enter-right");
+</script>
+
 <section
 	class="tech-innovation container"
 	aria-label="Innovacion Financiera y Tecnologica"
@@ -42,6 +49,7 @@
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
 			text-align: center;
+			opacity: 0;
 
 			@media (min-width: 480px) {
 				text-align: left;

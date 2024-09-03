@@ -2,6 +2,16 @@
 	const hamburger = document.querySelector(".hamburger__button");
 	const nav = document.querySelector(".header__nav");
 	const visibleClass = "header__nav--visible";
+	const links = document.querySelectorAll(".header__link");
+
+	links.forEach((link: Element) => {
+		link.addEventListener("click", () => {
+			const isMediumDevice = window.matchMedia("(min-width: 768px)").matches;
+			if (isMediumDevice) return;
+
+			addOrRemoveVisibleClass(false);
+		});
+	});
 
 	hamburger?.addEventListener("click", () => {
 		const isNavVisible = nav?.classList.contains("header__nav--visible");
@@ -45,7 +55,7 @@
 				<a
 					aria-label="Navegar a servicios"
 					class="header__link"
-					href="#services">servicios</a
+					href="#why-hire-us">servicios</a
 				>
 			</li>
 			<li>
@@ -63,11 +73,11 @@
 		</ul>
 	</nav>
 
-	<class class="hamburger">
+	<div class="hamburger">
 		<button class="hamburger__button">
 			<img src="hamburger-menu.svg" alt="Logo de menú de hamburguesa" />
 		</button>
-	</class>
+	</div>
 </header>
 
 <style lang="scss">
@@ -80,8 +90,11 @@
 		height: fit-content;
 		justify-content: space-between;
 		padding: 20px 0;
-		position: sticky;
+		position: fixed;
 		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 1;
 
 		@media (min-width: 768px) {
 			height: 80px;
@@ -142,20 +155,6 @@
 			&--visible {
 				display: block;
 				padding-top: 20px;
-				height: 0;
-				opacity: 0;
-				animation: expand 0.5s ease-out forwards;
-			}
-
-			@keyframes expand {
-				0% {
-					height: 0;
-					opacity: 0;
-				}
-				100% {
-					height: 185px;
-					opacity: 1;
-				}
 			}
 		}
 
@@ -171,7 +170,8 @@
 			}
 		}
 
-		&__link {
+		&__link:link,
+		&__link:visited {
 			text-decoration: none;
 			color: inherit;
 			text-transform: uppercase;
@@ -180,7 +180,8 @@
 			text-align: center;
 
 			&:hover,
-			&:focus {
+			&:focus,
+			&:active {
 				background: linear-gradient(to right, #2b92d5, #3fd9d7);
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
